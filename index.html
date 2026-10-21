@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Phoebe Reese Carmel Villaflor – IT Internship Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF8F4; --ink:#3A3836; --muted:#6F6A66; --line:#E6DFD8;
+  --blush:#E8B4BC; --blush-l:#F7E6E8; --blush-d:#A65C6B;
+  --font:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1F1D1C; --ink:#ECE6E1; --muted:#A8A19B; --line:#363230;
+    --blush:#B9707E; --blush-l:#2C2325; --blush-d:#E3A4B0; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1F1D1C; --ink:#ECE6E1; --muted:#A8A19B; --line:#363230;
+  --blush:#B9707E; --blush-l:#2C2325; --blush-d:#E3A4B0; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:auto}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--font);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);
+  background:var(--bg);z-index:10}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blush-d);outline-offset:3px;border-radius:2px}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);
+  border-bottom:1px solid var(--line)}
+.bar{max-width:920px;margin:0 auto;padding:14px 24px;display:flex;gap:24px;align-items:center;justify-content:space-between}
+.brand{font-weight:500;font-size:15px;text-decoration:none;white-space:nowrap}
+nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin:0 -8px}
+nav::-webkit-scrollbar{display:none}
+nav a{font-size:13.5px;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:999px;white-space:nowrap;
+  border:1px solid transparent}
+nav a:hover{color:var(--ink)}
+nav a[aria-current="page"]{color:var(--ink);background:var(--blush-l);border-color:var(--blush)}
+@media (max-width:720px){.bar{flex-direction:column;align-items:stretch;gap:8px;padding:12px 16px}}
+
+main{max-width:920px;margin:0 auto;padding:64px 24px 40px;position:relative}
+.js section[hidden]{display:none}
+section{min-height:60vh}
+.deco{position:absolute;right:-60px;top:-30px;width:300px;height:300px;pointer-events:none;z-index:0}
+section>*{position:relative;z-index:1}
+
+h1{font-weight:300;font-size:clamp(40px,8vw,72px);line-height:1.05;letter-spacing:-.02em;margin:0 0 20px}
+.proj-title{font-weight:400;font-size:clamp(34px,6vw,56px)}
+.sub{color:var(--muted);font-size:17px;margin:0 0 8px;max-width:56ch}
+.bar-accent{width:48px;height:3px;background:var(--blush);margin:28px 0 32px}
+.lede{font-weight:300;font-size:clamp(18px,2.4vw,22px);line-height:1.7;max-width:60ch;margin:0 0 48px}
+
+.tag{display:inline-block;font-size:13px;color:var(--ink);background:var(--blush-l);
+  border:1px solid var(--blush);border-radius:999px;padding:3px 14px;margin:0 0 20px}
+
+.rows{border-top:1px solid var(--line);margin-top:40px}
+.r{display:grid;grid-template-columns:170px 1fr;gap:12px 32px;padding:28px 0;border-bottom:1px solid var(--line)}
+.r h2{margin:0;font-size:14px;font-weight:500;color:var(--blush-d)}
+.r p{margin:0;max-width:62ch}
+.r .strong{font-weight:500}
+@media (max-width:640px){.r{grid-template-columns:1fr;padding:22px 0}}
+
+ul.sq{list-style:none;margin:0;padding:0;max-width:62ch}
+ul.sq li{position:relative;padding-left:22px;margin:0 0 14px}
+ul.sq li:last-child{margin-bottom:0}
+ul.sq li::before{content:"";position:absolute;left:0;top:.68em;width:6px;height:6px;background:var(--blush)}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chips li{font-size:14px;background:var(--blush-l);border:1px solid var(--blush);border-radius:999px;padding:4px 16px}
+
+.note{margin-top:32px;background:var(--blush-l);border-left:3px solid var(--blush);padding:18px 22px;max-width:62ch}
+.note strong{display:block;font-weight:500;font-size:14px;color:var(--blush-d);margin-bottom:2px}
+.note p{margin:0;font-size:15px}
+
+.edu .strong{display:block}
+.edu span{color:var(--muted)}
+
+.plist{list-style:none;margin:0;padding:0}
+.plist li{border-bottom:1px solid var(--line)}
+.plist li:last-child{border:0}
+.plist a{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:14px 0;text-decoration:none}
+.plist a:hover .pt{color:var(--blush-d)}
+.pt{font-weight:500}
+.pr{display:block;font-size:14px;color:var(--muted)}
+.go{font-size:14px;color:var(--blush-d);white-space:nowrap}
+
+.contact-list{list-style:none;margin:0;padding:0}
+.contact-list a,.contact-list span{font-weight:500;font-size:clamp(17px,2.6vw,21px);word-break:break-word}
+.contact-list a{text-decoration-color:var(--blush);text-underline-offset:5px;text-decoration-thickness:2px}
+.contact-list a:hover{text-decoration-color:var(--blush-d)}
+
+.pager{display:flex;justify-content:space-between;gap:16px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line)}
+.pager a{text-decoration:none;font-size:15px;max-width:48%}
+.pager small{display:block;color:var(--muted);font-size:13px}
+.pager a:hover span{color:var(--blush-d)}
+.pager .next{margin-left:auto;text-align:right}
+
+footer{max-width:920px;margin:0 auto;padding:24px 24px 48px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="brand" href="#about" data-view="about">Phoebe Villaflor</a>
+    <nav aria-label="Portfolio sections">
+      <a href="#about" data-view="about">About</a>
+      <a href="#stride" data-view="stride">STRIDE</a>
+      <a href="#food-ordering" data-view="food-ordering">Food Ordering</a>
+      <a href="#wastenot" data-view="wastenot">WasteNot</a>
+      <a href="#kitameter" data-view="kitameter">KitaMeter</a>
+      <a href="#contact" data-view="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section id="about" data-title="About Me">
+  <svg class="deco" viewBox="0 0 300 300" fill="none" aria-hidden="true">
+    <circle cx="170" cy="130" r="120" stroke="var(--blush-l)" stroke-width="1.5"/>
+    <circle cx="170" cy="130" r="88" stroke="var(--blush)" stroke-width="1.2"/>
+    <circle cx="170" cy="130" r="40" fill="var(--blush-l)"/>
+    <rect x="165" y="125" width="10" height="10" fill="var(--blush)"/>
+  </svg>
+  <p class="sub">4th-year BS Information Technology student</p>
+  <h1>Phoebe Reese<br>Carmel Villaflor</h1>
+  <div class="bar-accent"></div>
+  <p class="lede">I am a fourth-year Information Technology student with interests in software development, UI/UX design, and cybersecurity. My academic projects have given me practice in frontend and backend development, interface design, and coordinating small teams. I am looking for an internship where I can keep learning through practical experience and contribute to real projects.</p>
+  <div class="rows">
+    <div class="r edu"><h2>Education</h2>
+      <p><span class="strong">Bachelor of Science in Information Technology</span>
+      <span>University of San Jose–Recoletos</span>
+      <span>Currently in 4th year</span></p></div>
+    <div class="r"><h2>Interests</h2>
+      <ul class="sq"><li>Software development</li><li>UI/UX design</li><li>Cybersecurity</li></ul></div>
+    <div class="r"><h2>Projects</h2>
+      <ul class="plist">
+        <li><a href="#stride" data-view="stride"><span><span class="pt">STRIDE</span><span class="pr">Project Leader / Backend Developer</span></span><span class="go">View project</span></a></li>
+        <li><a href="#food-ordering" data-view="food-ordering"><span><span class="pt">Simple Food Ordering System</span><span class="pr">Project Manager / Frontend Developer</span></span><span class="go">View project</span></a></li>
+        <li><a href="#wastenot" data-view="wastenot"><span><span class="pt">WasteNot</span><span class="pr">Project Leader / UI/UX Designer / Full Stack Developer</span></span><span class="go">View project</span></a></li>
+        <li><a href="#kitameter" data-view="kitameter"><span><span class="pt">KitaMeter</span><span class="pr">Frontend Developer / UI/UX Designer</span></span><span class="go">View project</span></a></li>
+      </ul></div>
+  </div>
+  <div class="pager"><a class="next" href="#stride" data-view="stride"><small>Next project</small><span>STRIDE</span></a></div>
+</section>
+
+<section id="stride" data-title="STRIDE">
+  <h1 class="proj-title">STRIDE</h1>
+  <p class="sub">Safe Travel Routing and Incident Detection Engine</p>
+  <div class="rows">
+    <div class="r"><h2>Overview</h2><p>A pedestrian-safety routing application focused on Cebu City that evaluates walking routes using incident records, community reports, and relevant risk factors.</p></div>
+    <div class="r"><h2>Role</h2><p class="strong">Project Leader / Backend Developer</p></div>
+    <div class="r"><h2>Contributions</h2><ul class="sq">
+      <li>Implemented map display and current-location functionality.</li>
+      <li>Worked on destination search and walking-route retrieval.</li>
+      <li>Developed the route risk-scoring algorithm.</li>
+      <li>Integrated CCPO incident data and community-reported incidents into risk evaluation.</li>
+      <li>Considered factors such as incident severity, recency, density, proximity, environmental conditions, distance, and travel time.</li>
+      <li>Managed code revisions and collaborated through GitHub.</li></ul></div>
+    <div class="r"><h2>Technologies</h2><ul class="chips"><li>NativePHP</li><li>Laravel / PHP</li><li>PostgreSQL</li><li>OpenStreetMap</li><li>GitHub</li></ul></div>
+  </div>
+  <div class="note"><strong>Disclaimer</strong><p>Risk scores are estimates, not guarantees of safety. The absence of reports does not mean a location is safe.</p></div>
+  <div class="pager"><a href="#about" data-view="about"><small>Previous</small><span>About me</span></a><a class="next" href="#food-ordering" data-view="food-ordering"><small>Next project</small><span>Simple Food Ordering System</span></a></div>
+</section>
+
+<section id="food-ordering" data-title="Simple Food Ordering System">
+  <h1 class="proj-title">Simple Food Ordering System</h1>
+  <div class="rows">
+    <div class="r"><h2>Overview</h2><p>A restaurant ordering website with customer-facing ordering features and administrative pages.</p></div>
+    <div class="r"><h2>Role</h2><p class="strong">Project Manager / Frontend Developer</p></div>
+    <div class="r"><h2>Contributions</h2><ul class="sq">
+      <li>Developed frontend components for the menu and shopping cart.</li>
+      <li>Worked on administrative pages for inventory and dashboard functions.</li>
+      <li>Organized tasks and responsibilities through a Work Breakdown Structure.</li>
+      <li>Tracked team progress using Excel.</li>
+      <li>Coordinated team activities and managed code revisions through GitHub.</li></ul></div>
+    <div class="r"><h2>Technologies</h2><ul class="chips"><li>React.js</li><li>TypeScript</li><li>GitHub</li><li>Excel</li></ul></div>
+  </div>
+  <div class="pager"><a href="#stride" data-view="stride"><small>Previous project</small><span>STRIDE</span></a><a class="next" href="#wastenot" data-view="wastenot"><small>Next project</small><span>WasteNot</span></a></div>
+</section>
+
+<section id="wastenot" data-title="WasteNot">
+  <span class="tag">Project concept / prototype</span>
+  <h1 class="proj-title">WasteNot</h1>
+  <div class="rows">
+    <div class="r"><h2>Overview</h2><p>A food-waste reduction platform concept connecting food providers, consumers, NGOs, and community groups to help redistribute surplus food.</p></div>
+    <div class="r"><h2>Role</h2><p class="strong">Project Leader / UI/UX Designer / Full Stack Developer</p></div>
+    <div class="r"><h2>Contributions</h2><ul class="sq">
+      <li>Designed low-fidelity and high-fidelity interfaces using Figma.</li>
+      <li>Worked on frontend pages and interface layouts.</li>
+      <li>Planned user flows for surplus food listings, donations, and inventory.</li>
+      <li>Helped shape the platform around food-waste reduction, food accessibility, and sustainable consumption, aligned with UN Sustainable Development Goal 12.</li></ul></div>
+    <div class="r"><h2>Tools</h2><ul class="chips"><li>Figma</li></ul></div>
+  </div>
+  <div class="note"><strong>Project status</strong><p>WasteNot is a project concept and prototype. It has not been launched as a live platform.</p></div>
+  <div class="pager"><a href="#food-ordering" data-view="food-ordering"><small>Previous project</small><span>Simple Food Ordering System</span></a><a class="next" href="#kitameter" data-view="kitameter"><small>Next project</small><span>KitaMeter</span></a></div>
+</section>
+
+<section id="kitameter" data-title="KitaMeter">
+  <span class="tag">Project concept</span>
+  <h1 class="proj-title">KitaMeter</h1>
+  <div class="rows">
+    <div class="r"><h2>Overview</h2><p>A concept for helping jeepney drivers record and review their earnings per route or trip (“pasada”).</p></div>
+    <div class="r"><h2>Role</h2><p class="strong">Frontend Developer / UI/UX Designer</p></div>
+    <div class="r"><h2>Contributions</h2><ul class="sq">
+      <li>Designed the interface in Figma.</li>
+      <li>Planned user flows for recording and reviewing route earnings.</li>
+      <li>Worked on calculations supporting the earnings-tracking workflow.</li>
+      <li>Focused on a straightforward, accessible interface for everyday use.</li></ul></div>
+    <div class="r"><h2>Tools</h2><ul class="chips"><li>Figma</li></ul></div>
+  </div>
+  <div class="note"><strong>Project status</strong><p>KitaMeter is a project concept. It is not a production-ready application.</p></div>
+  <div class="pager"><a href="#wastenot" data-view="wastenot"><small>Previous project</small><span>WasteNot</span></a><a class="next" href="#contact" data-view="contact"><small>Next</small><span>Contact</span></a></div>
+</section>
+
+<section id="contact" data-title="Contact">
+  <svg class="deco" viewBox="0 0 300 300" fill="none" aria-hidden="true">
+    <circle cx="170" cy="130" r="120" stroke="var(--blush-l)" stroke-width="1.5"/>
+    <circle cx="170" cy="130" r="88" stroke="var(--blush)" stroke-width="1.2"/>
+    <circle cx="170" cy="130" r="40" fill="var(--blush-l)"/>
+    <rect x="165" y="125" width="10" height="10" fill="var(--blush)"/>
+  </svg>
+  <h1>Get in touch</h1>
+  <div class="bar-accent"></div>
+  <p class="lede">I am interested in IT internship opportunities and in learning from real-world projects.</p>
+  <div class="rows">
+    <div class="r"><h2>Email</h2><ul class="contact-list"><li><a href="mailto:phebsvillaflor@gmail.com">phebsvillaflor@gmail.com</a></li></ul></div>
+    <div class="r"><h2>Phone</h2><ul class="contact-list"><li><a href="tel:+639773366511">09773366511</a></li></ul></div>
+    <div class="r"><h2>Location</h2><ul class="contact-list"><li><span>Cebu City, Philippines</span></li></ul></div>
+  </div>
+  <div class="pager"><a href="#kitameter" data-view="kitameter"><small>Previous project</small><span>KitaMeter</span></a></div>
+</section>
+
+</main>
+<footer>Phoebe Reese Carmel Villaflor – IT Internship Portfolio</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  root.classList.add("js");
+  var secs=Array.prototype.slice.call(document.querySelectorAll("main section"));
+  var links=Array.prototype.slice.call(document.querySelectorAll("[data-view]"));
+  var ids=secs.map(function(s){return s.id});
+  function show(id,scroll){
+    if(ids.indexOf(id)<0) id="about";
+    secs.forEach(function(s){ s.hidden = s.id!==id; });
+    links.forEach(function(a){
+      if(a.closest("nav")){
+        if(a.getAttribute("data-view")===id) a.setAttribute("aria-current","page");
+        else a.removeAttribute("aria-current");
+      }
+    });
+    var cur=document.getElementById(id);
+    document.title=cur.getAttribute("data-title")+" – Phoebe Villaflor";
+    if(scroll) window.scrollTo(0,0);
+    var active=document.querySelector('nav a[aria-current="page"]');
+    if(active && active.scrollIntoView){ try{ active.scrollIntoView({inline:"center",block:"nearest"}); }catch(e){} }
+  }
+  links.forEach(function(a){
+    a.addEventListener("click",function(e){
+      e.preventDefault();
+      var id=a.getAttribute("data-view");
+      try{ history.replaceState(null,"","#"+id); }catch(err){}
+      show(id,true);
+    });
+  });
+  window.addEventListener("hashchange",function(){ show(location.hash.slice(1),true); });
+  show(location.hash.slice(1),false);
+})();
+</script>
+</body>
+</html>
